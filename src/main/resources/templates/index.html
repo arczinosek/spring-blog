@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pl">
+<head>
+    <title>Blog App</title>
+</head>
+<body>
+    <h1>Witaj na blogu!</h1>
+
+    <h2>List of posts</h2>
+
+    <ul>
+        <li th:each="post : ${posts}">
+            <h3 th:text="${post.getTitle()} [${post.getId()}]"></h3>
+            <p th:text="${post.getPublishedAt()}"></p>
+        </li>
+    </ul>
+</body>
+</html>
